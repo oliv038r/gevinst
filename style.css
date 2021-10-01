@@ -1,0 +1,218 @@
+/* generelt css */
+
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;0,900;1,100;1,200;1,300;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-color: rgb(231, 224, 224);
+  --color-1: #4F4139;
+  --color-2: #617166;
+  --color-3: #F1E2BE;
+  --color-4: #E7A281;
+
+  --primary-font: "Neue Kabel", sans-serif;
+  --secondary-font: "Allison", cursive;
+  --third-font: "Montserrat", sans-serif;
+  --main-text-color: #4F4139;
+}
+
+html {
+  font-size: 100%;
+  font-family: var(--primary-font);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+/**************************************************/
+/* Hero */
+/**************************************************/
+
+.header-wrapper h1 {
+    font-size: 2rem;
+    text-transform: lowercase;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: var(--font-color);
+    padding: 1em;
+    font-family: var(--primary-font);
+    
+  }
+
+  .bg-no-overlay {
+    background-image: url("assets/hero-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**************************************************/
+/* About us */
+/**************************************************/
+
+.about h3 {
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    transform: rotate(-3deg);
+    color: white;
+}
+
+.about h2 {
+    font-family: var(--primary-font);
+    font-size: 5rem;
+    font-weight: 400;
+    color: white;
+}
+
+.about p {
+    font-family: var(--primary-font);
+    padding-left: 20%;
+    padding-right: 20%;
+    color: white;
+    font-weight: 200;
+}
+
+#about_us {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-1);
+}
+
+/**************************************************/
+/* Products */
+/**************************************************/
+
+.grid-products {
+    max-width: 90%;
+}
+/**************************************************/
+/* Quote */
+/**************************************************/
+.quote {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-1);
+}
+
+.quote h3 {
+    font-family: var(--secondary-font);
+    font-size: 5rem;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.quote-img {
+    object-fit: cover;
+    max-height: 40vh;
+    width: 100%;
+    /* position skal justeres */
+    
+}
+
+/**************************************************/
+/* Social */
+/**************************************************/
+
+.social-header {
+    font-family: var(--primary-font);
+    font-size: 5rem;
+    font-weight: 400;
+    color: var(--color-1);
+}
+
+/**************************************************/
+/* Footer */
+/**************************************************/
+
+
+  /* // Extra small devices (portrait phones, less than 576px)
+    // No media query for `xs` since this is the default in Bootstrap*/
+/**************************************************/
+/* Hjælpefil til at identificere breakpoints. Du kan bruge de samme breakpoints i din egen style.css-fil */
+body {
+    background-color: white;
+     }
+    /* tidl. kaldet 'xs-' */
+    body::before {
+    content: "Default. mobile/under 576px. Deafult i Bootstrap.";
+    padding: 1rem;
+    background-color: turquoise;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0.9;
+     }
+    /*  section {
+       margin-bottom: 30px;
+     } */
+    /**************************************************/
+    /* Small devices (landscape phones, 576px and up) */
+    /**************************************************/
+    @media (min-width: 576px) {
+    
+    body::before {
+    content: "'sm-': lig el. over 576px.";
+       }
+    /* END "sm-" 576px and up */
+     }
+    /**************************************************/
+    /* // Medium devices (tablets, 768px and up) */
+    /**************************************************/
+    @media (min-width: 768px) {
+    
+    body::before {
+    content: "'md': lig el. over 768px. ";
+       }
+    /* END "md-" 768px and up */
+     }
+    /**************************************************/
+    /* // Large devices (desktops, 992px and up) */
+    /**************************************************/
+    @media (min-width: 992px) {
+   
+    body::before {
+    content: "'lg': lig el. over 992px.";
+       }
+    /* END "lg-" 992px and up */
+     }
+    /**************************************************/
+    /* // Extra large devices (large desktops, 1200px and up) */
+    /**************************************************/
+    @media (min-width: 1200px) {
+    
+    body::before {
+    content: "'xl': lig el. over 1200px.";
+       }
+    /* END "xl-" 1200px and up */
+     }
+    /**************************************************/
+    /* // Extra Extra large (XXL) devices (XXL screens, 1400px and up) */
+    /**************************************************/
+    @media (min-width: 1400px) {
+    
+    body::before {
+    content: "'xxl': lig el. over 1400px.";
+       }
+    /* END "xl-" 1400px and up */
+     }
+  
