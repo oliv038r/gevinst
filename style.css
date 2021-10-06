@@ -12,6 +12,7 @@
   --color-2: #617166;
   --color-3: #F1E2BE;
   --color-4: #E7A281;
+  --background-color: #FFF9EA;
 
   --primary-font: "Neue Kabel", sans-serif;
   --secondary-font: "Allison", cursive;
@@ -37,58 +38,61 @@ img {
 /* Hero */
 /**************************************************/
 
-.header-wrapper h1 {
-    font-size: 2rem;
-    text-transform: lowercase;
-    letter-spacing: 0px;
-    font-weight: 400;
-    color: var(--font-color);
-    padding: 1em;
-    font-family: var(--primary-font);
-    
+#hero div {
+    place-items: center;
+  }
+  
+  #hero div * {
+    grid-area: 1 / 1 / -1 / -1;
   }
 
-  .bg-no-overlay {
-    background-image: url("assets/hero-img.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
-    height: 90vh;
+  #hero h1 {
+    font-family: var(--primary-font);
+    font-size: 5rem;
+    font-weight: 400;
+    color: var(--color-1);
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    align-self: flex-start;
+  }
+
+  #hero h3 {
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    transform: rotate(-3deg);
+    color: var(--color-1);
+    display: flex;
+    align-self: flex-start;
+  }
+
+  #hero img {
+    display: flex;
+    align-self: flex-end;
+  }
 
 /**************************************************/
 /* About us */
 /**************************************************/
 
-.about h3 {
-    font-family: var(--secondary-font);
-    font-size: 2rem;
-    letter-spacing: 2px;
-    transform: rotate(-3deg);
-    color: white;
-}
-
 .about h2 {
     font-family: var(--primary-font);
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 400;
     color: white;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .about p {
     font-family: var(--primary-font);
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     color: white;
     font-weight: 200;
+    font-size: 1.2rem;
 }
 
 #about_us {
-    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,9 +103,61 @@ img {
 /* Products */
 /**************************************************/
 
+ .section-header h2 {
+    font-family: var(--primary-font);
+    font-size: 4rem;
+    color: var(--main-text-color);
+    text-transform: lowercase;
+}
+  
 .grid-products {
     max-width: 90%;
 }
+
+.products-1 {
+    background-image: url("assets/background-1.jpg");
+    background-position: top;
+}
+
+.products-1 h4, .products-2 h4 {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: var(--main-text-color);
+}
+
+.products-1 h4:hover, .products-2 h4:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.products-1 img:hover {
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.products-2 img:hover {
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.products-2 {
+    background-image: url("assets/background-1\ –\ 3.jpg");
+    background-position: top;
+}
+
+.products-2 img {
+    max-width: 50%;
+}
+
+.products-2 h4 {
+    font-size: 2.5rem;
+}
+
+
 /**************************************************/
 /* Quote */
 /**************************************************/
@@ -139,9 +195,124 @@ img {
     color: var(--color-1);
 }
 
+.social button {
+    font-family: var(--secondary-font);
+    color: var(--color-1);
+    text-decoration: none;
+    font-size: 2rem;;
+}
+
+.social button:hover {
+    color: var(--color-4);
+}
+
+.spoon {
+    max-width: 80%;
+}
+
+.spoon:hover {
+    transform: translateX(2%);
+}
+
+.juster_bredde {
+    max-width: 85%;
+}
+
 /**************************************************/
 /* Footer */
 /**************************************************/
+
+
+/**************************************************/
+/* Underside */
+/**************************************************/
+
+.underside_body {
+    background-image: url("assets/background-1.jpg");
+    background-position: top;
+}
+.home_btn {
+    font-family: var(--primary-font);
+    font-size: 6rem;
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+.home_btn:hover {
+    color: var(--color-3);
+}
+
+.underside_sektion_1 img {
+    max-width: 70%;
+}
+
+.underside_sektion_1 h2 {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 5rem;
+    letter-spacing: 3px;
+    color: var(--main-text-color);
+}
+
+.underside_sektion_1 p {
+    font-family: var(--third-font);    
+    font-size: 1.3rem;
+}
+
+.underside_sektion_2 {
+    background-color: var(--color-1);
+}
+
+.underside_sektion_2 h3 {
+    font-family: var(--primary-font);
+    color:var(--color-3);
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+.underside_sektion_2 hr {
+    color:var(--color-3);
+    height: 2px;
+    max-width: 80vw;
+    
+}
+
+.underside_social {
+
+}
+
+.underside_social img {
+    width: 20%;
+}
+
+.ingredienser {
+    width: 80vw;
+    background-color: transparent;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: none;
+    color: var(--color-3);
+    font-family: var(--secondary-font);
+    font-size: 2.5rem;
+}
+
+.ing_size {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.per_100g {
+    color: var(--color-3);
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: right;
+    max-width: 90vw;
+}
 
 
   /* // Extra small devices (portrait phones, less than 576px)
@@ -173,6 +344,17 @@ body {
     body::before {
     content: "'sm-': lig el. over 576px.";
        }
+
+       .about h2 {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .about p {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
     /* END "sm-" 576px and up */
      }
     /**************************************************/
@@ -183,6 +365,61 @@ body {
     body::before {
     content: "'md': lig el. over 768px. ";
        }
+       #hero h1 {
+        font-size: 7rem;
+      }
+    
+      #hero h3 {
+        font-size: 2.5rem;
+      }
+
+      .about p {
+        font-size: 1.3rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .products-1 h4, .products-2 h4 {
+        font-size: 4rem;
+    }
+
+    .products-2 img {
+        max-width: 40%;
+    }
+
+    .juster_bredde {
+        max-width: 60%;
+    }
+
+    .ingredienser {
+        max-width: 40vw;
+    }
+
+    .underside_sektion_2 hr {
+        max-width: 40vw;
+    }
+
+    .underside_sektion_2 h3 {
+        font-size: 1.5rem;
+    }
+
+    .per_100g {
+        max-width: 44vw;
+        font-size: 0.8rem ;
+    }
+
+    .list-group-item {
+        font-size: 2rem;
+    }
+    
+    .ing_size {
+        font-family: var(--primary-font);
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+      
+    
     /* END "md-" 768px and up */
      }
     /**************************************************/
@@ -193,6 +430,41 @@ body {
     body::before {
     content: "'lg': lig el. over 992px.";
        }
+
+       #hero h1 {
+        font-size: 9rem;
+      }
+    
+      #hero h3 {
+        font-size: 3rem;
+      }
+
+      .about h2 {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    
+    .about p {
+        font-size: 1.4rem;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .products-2 h4 {
+        font-size: 3rem;
+    }
+
+    .products-2 img {
+        max-width: 50%;
+    }
+
+    .juster_bredde {
+        max-width: 55%;
+    }
+
+    
+
+   
     /* END "lg-" 992px and up */
      }
     /**************************************************/
@@ -203,6 +475,64 @@ body {
     body::before {
     content: "'xl': lig el. over 1200px.";
        }
+       #hero h1 {
+        font-size: 12rem;
+      }
+    
+      #hero h3 {
+        font-size: 4rem;
+      }
+
+      .about h2 {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    
+    .about p {
+        font-size: 1.6rem;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .products-1 h4 {
+        font-size: 6rem;
+    }
+
+    .products-2 img {
+        max-width: 40%;
+    }
+
+    .juster_bredde {
+        max-width: 90%;
+    }
+
+    .ingredienser {
+        max-width: 30vw;
+    }
+
+    .underside_sektion_2 hr {
+        max-width: 30vw;
+    }
+
+    .underside_sektion_2 h3 {
+        font-size: 1.5rem;
+    }
+
+    .per_100g {
+        max-width: 39vw;
+        font-size: 0.8rem ;
+    }
+
+    .list-group-item {
+        font-size: 2rem;
+    }
+    
+    .ing_size {
+        font-family: var(--primary-font);
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
     /* END "xl-" 1200px and up */
      }
     /**************************************************/
@@ -213,6 +543,29 @@ body {
     body::before {
     content: "'xxl': lig el. over 1400px.";
        }
+
+       #hero h1 {
+        font-size: 14rem;
+      }
+    
+      #hero h3 {
+        font-size: 5rem;
+      }
+
+      .about h2 {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    
+    .about p {
+        font-size: 1.8rem;
+        padding-left: 18%;
+        padding-right: 18%;
+    }
+
+    
+
+   
     /* END "xl-" 1400px and up */
      }
   
