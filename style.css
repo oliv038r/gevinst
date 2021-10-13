@@ -7,12 +7,13 @@
 }
 
 :root {
-  --font-color: rgb(231, 224, 224);
+  --font-color: #FDF7F0;
   --color-1: #4F4139;
   --color-2: #617166;
-  --color-3: #F1E2BE;
+  --color-3: #DFCCB9;
   --color-4: #E7A281;
-  --background-color: #FFF9EA;
+  --color-5: #A7C4C0;
+  --background-color: #FDF7F0;
 
   --primary-font: "Neue Kabel", sans-serif;
   --secondary-font: "Allison", cursive;
@@ -31,14 +32,34 @@ img {
   height: auto;
 }
 
+h2 {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-1);
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
-
+p {
+    font-family: var(--primary-font);
+    color: var(--color-1);
+    font-weight: 200;
+    font-size: 1rem;
+}
 
 /**************************************************/
 /* Hero */
 /**************************************************/
 
-#hero div {
+#hero {
+    height: 60vh;
+    background-color: var(--color-3);
+    background-image: url(/assets/hero-grid.png);
+    background-position: center;
+    background-size: cover;
+} 
+    #hero div {
     place-items: center;
   }
   
@@ -51,8 +72,7 @@ img {
     font-size: 5rem;
     font-weight: 400;
     color: var(--color-1);
-    display: flex;
-    align-self: flex-start;
+    padding-top: 12vh;
   }
 
   #hero h3 {
@@ -61,11 +81,11 @@ img {
     letter-spacing: 2px;
     transform: rotate(-3deg);
     color: var(--color-1);
-    display: flex;
-    align-self: flex-start;
+    padding-top: 10vh;
+
   }
 
-  #hero img {
+  .front-img-hero {
     display: flex;
     align-self: flex-end;
   }
@@ -74,52 +94,43 @@ img {
 /* About us */
 /**************************************************/
 
-.about h2 {
-    font-family: var(--primary-font);
-    font-size: 4rem;
-    font-weight: 400;
-    color: white;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.about p {
-    font-family: var(--primary-font);
-    padding-left: 10%;
-    padding-right: 10%;
-    color: white;
-    font-weight: 200;
-    font-size: 1.2rem;
-}
-
 #about_us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-1);
+    background-color: var(--background-color);
 }
+
+#more_info {
+    background-color: #2C3B44;
+}
+
+#more_info h2, #more_info p {
+    color: var(--color-3);
+}
+
+.vikinge_bk_img{
+    background-image: url(/assets/gevinst-billede-opdeler.jpg);
+    background-position: bottom;
+    background-size: cover;
+    height: 60vh;
+}
+
+.vikinge_bk_img img {
+    height: 63vh;
+}
+
 
 /**************************************************/
 /* Products */
 /**************************************************/
 
- .section-header h2 {
-    font-family: var(--primary-font);
-    font-size: 4rem;
-    color: var(--main-text-color);
-    text-transform: lowercase;
-}
   
-.grid-products {
-    max-width: 90%;
-}
-
 .products-1 {
-    background-image: url("assets/background-1.jpg");
-    background-position: top;
+    background-color: var(--background-color);
+    background-image: url(/assets/hero-grid.png);
+    background-position: center;
+    background-size: cover;
 }
 
-.products-1 h4, .products-2 h4 {
+.products-1 h4 {
     font-family: var(--secondary-font);
     font-weight: 400;
     font-size: 3rem;
@@ -127,15 +138,27 @@ img {
     color: var(--main-text-color);
 }
 
-.products-1 h4:hover, .products-2 h4:hover {
+.products-1 .product {
+    max-width: 60%;
+}
+
+.products-1 h4:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-.products-1 img:hover {
+.products-1 .product:hover {
     transition: all 0.4s ease-in-out;
     cursor: pointer;
     opacity: 0.7;
+}
+
+.products-2 h2 {
+    text-transform: lowercase;
+    transform: rotate(90deg);
+    font-size: 6rem;
+    color: var(--color-3);
+    transform-origin: 70% 30%;
 }
 
 .products-2 img:hover {
@@ -145,59 +168,58 @@ img {
 }
 
 .products-2 {
-    background-image: url("assets/background-1\ –\ 3.jpg");
-    background-position: top;
+    background-color: var(--color-1);
+    background-position: center;
+    background-size: cover;
 }
 
 .products-2 img {
-    max-width: 50%;
+    max-width: 75%;
 }
-
-.products-2 h4 {
-    font-size: 2.5rem;
-}
-
 
 /**************************************************/
-/* Quote */
+/* Moments */
 /**************************************************/
-.quote {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-1);
+
+#moments-section h3 {
+    font-family: var(--primary-font);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--main-text-color);
 }
 
-.quote h3 {
-    font-family: var(--secondary-font);
-    font-size: 5rem;
-    letter-spacing: 2px;
-    color: white;
-}
+/* #moments-section img {
+    border-radius: 61% 39% 51% 49% / 48% 44% 56% 52%;
 
-.quote-img {
-    object-fit: cover;
-    max-height: 40vh;
-    width: 100%;
-    /* position skal justeres */
-    
-}
+} */
 
 /**************************************************/
 /* Social */
 /**************************************************/
 
+#social-section {
+background-color: var(--color-3);
+}
+
+#social-section h3{
+    color: var(--main-text-color);
+    font-size: 3rem;
+}
+
+#social-section p {
+    color: var(--main-text-color);
+}
+
 .social-header {
     font-family: var(--primary-font);
     font-size: 5rem;
     font-weight: 400;
-    color: var(--color-1);
+    color: var(--font-color);
 }
 
 .social button {
     font-family: var(--secondary-font);
-    color: var(--color-1);
+    color: var(--font-color);
     text-decoration: none;
     font-size: 2rem;;
 }
@@ -221,6 +243,27 @@ img {
 /**************************************************/
 /* Footer */
 /**************************************************/
+
+footer {
+    background-color: var(--color-1);
+}
+
+.me-3 {
+    color: white;
+}
+
+.copyright {
+font-family: var(--primary-font);
+font-size: 0.7rem;
+font-weight: 300;
+}
+
+.copyright a {
+    text-decoration: none;
+
+}
+
+
 
 
 /**************************************************/
@@ -278,9 +321,7 @@ img {
     
 }
 
-.underside_social {
 
-}
 
 .underside_social img {
     width: 20%;
@@ -340,6 +381,10 @@ body {
     /* Small devices (landscape phones, 576px and up) */
     /**************************************************/
     @media (min-width: 576px) {
+
+        #hero {
+            height: 70vh;
+        }
     
     body::before {
     content: "'sm-': lig el. over 576px.";
@@ -355,16 +400,33 @@ body {
         padding-right: 15%;
     }
 
+    .products-2 h2 {
+        text-transform: lowercase;
+        transform: rotate(0deg);
+        font-size: 6rem;
+        color: var(--color-3);
+        transform-origin: top;
+    }
+
+    .products-2 img {
+        max-width: 100%;
+    }
+
     /* END "sm-" 576px and up */
      }
     /**************************************************/
     /* // Medium devices (tablets, 768px and up) */
     /**************************************************/
     @media (min-width: 768px) {
+
+        #hero {
+            height: 80vh;
+        }
     
     body::before {
     content: "'md': lig el. over 768px. ";
        }
+
        #hero h1 {
         font-size: 7rem;
       }
@@ -379,13 +441,10 @@ body {
         padding-right: 10%;
     }
 
-    .products-1 h4, .products-2 h4 {
+    .products-1 h4 {
         font-size: 4rem;
     }
 
-    .products-2 img {
-        max-width: 40%;
-    }
 
     .juster_bredde {
         max-width: 60%;
@@ -426,6 +485,10 @@ body {
     /* // Large devices (desktops, 992px and up) */
     /**************************************************/
     @media (min-width: 992px) {
+
+        #hero {
+            height: 100vh;
+        }
    
     body::before {
     content: "'lg': lig el. over 992px.";
@@ -450,13 +513,10 @@ body {
         padding-right: 15%;
     }
 
-    .products-2 h4 {
-        font-size: 3rem;
+    .moments {
+        max-width: 100%;
     }
 
-    .products-2 img {
-        max-width: 50%;
-    }
 
     .juster_bredde {
         max-width: 55%;
@@ -476,7 +536,7 @@ body {
     content: "'xl': lig el. over 1200px.";
        }
        #hero h1 {
-        font-size: 12rem;
+        font-size: 10rem;
       }
     
       #hero h3 {
@@ -487,6 +547,11 @@ body {
         padding-left: 15%;
         padding-right: 15%;
     }
+
+    .front-img-hero {
+        height: 50%;
+        width: auto;
+    }
     
     .about p {
         font-size: 1.6rem;
@@ -496,10 +561,6 @@ body {
 
     .products-1 h4 {
         font-size: 6rem;
-    }
-
-    .products-2 img {
-        max-width: 40%;
     }
 
     .juster_bredde {
@@ -545,7 +606,7 @@ body {
        }
 
        #hero h1 {
-        font-size: 14rem;
+        font-size: 11rem;
       }
     
       #hero h3 {
